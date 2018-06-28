@@ -1,0 +1,19 @@
+{
+  "name": "theloungeui",
+  "version": "1.0.0",
+  "description": "Front-End code for The Lounge application",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheLoungeCampus/TheLoungeUI.git"
+  },
+  "author": "Tyler Russell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheLoungeCampus/TheLoungeUI/issues"
+  },
+  "homepage": "https://github.com/TheLoungeCampus/TheLoungeUI#readme"
+}
