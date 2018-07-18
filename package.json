@@ -4,7 +4,8 @@
   "description": "Front-End code for The Lounge application",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,23 @@
   "bugs": {
     "url": "https://github.com/TheLoungeCampus/TheLoungeUI/issues"
   },
-  "homepage": "https://github.com/TheLoungeCampus/TheLoungeUI#readme"
+  "homepage": "https://github.com/TheLoungeCampus/TheLoungeUI#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "browserify": "^16.2.2",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-inject": "^4.3.2",
+    "gulp-rename": "^1.3.0",
+    "webpack": "^4.14.0"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.18",
+    "angular": "^1.7.2",
+    "angular-animate": "^1.7.0",
+    "angular-aria": "^1.7.2",
+    "angular-material": "^1.1.10",
+    "angular-messages": "^1.7.2"
+  }
 }

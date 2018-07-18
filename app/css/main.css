@@ -1,0 +1,19 @@
+body {
+    font-family: Open Sans
+}
+
+.capitalized {
+    text-transform: capitalize;
+}
+
+.green-button-style {
+    border: 2px solid #36c298;
+    border-radius: 4px;
+    color: #36c298;
+}
+
+.grey-button-style {
+    border: 2px solid #5e5e5e;
+    border-radius: 4px;
+    color: #5e5e5e;
+}
