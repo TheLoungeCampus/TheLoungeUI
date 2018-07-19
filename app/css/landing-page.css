@@ -6,18 +6,19 @@
 .landing-page-learn-more {
     font-weight: 500;
 }
-.md-button {
-    margin: 0px;
+.md-button.md-large-button {
+    min-width: 175%;
 }
 .lounge-header-label {
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+    margin-left: 25px;
 }
 .landing-page-white-text {
     color: white;
     font-weight: 100;
-    line-height: 30px;
+    line-height: 40px;
     padding-right: 15px;
 }
 .landing-page-image {
