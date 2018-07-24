@@ -8,4 +8,4 @@ We're using the latest version of Angular 1, along with Material 2 and several o
 
 # Run the Application
 
-Once the environment is set up, you should be able to run it from a terminal, at the root of the project with `gulp`.
+Once the environment is set up, you should be able to run it from a terminal, at the root of the project with `npm start`, then in a separate terminal window in the same directory run `gulp`.
