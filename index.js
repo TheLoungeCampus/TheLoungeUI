@@ -5,10 +5,11 @@ const port = 4000;
 var path = require('path');
 
 app.use(express.static(path.join(__dirname, 'app')));
-// app.use(express.static(path.join(__dirname, './node_modules')));
-
-app.get('/', function(req, res) {
+app.route('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/app/index.html'));
 });
-
+// Let Angular handle routing...
+app.all('*', function(req, res) {
+    res.sendFile(path.resolve(__dirname + '/app/index.html' ));
+});
 app.listen(port, () => console.log('SLSH App listening on port ' + port + '!'));

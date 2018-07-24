@@ -1,0 +1,53 @@
+<md-content layout="column" flex class="whole-page">
+    <div layout="row" flex>
+        <div layout="column" flex="50" class="login-page-left">
+            <div layout="row">
+                <p class="md-title lounge-header-label">The Lounge</p>
+            </div>
+        </div>
+        <div layout="column" flex="50" class="login-page-right">
+            <div layout="row" layout-align="end center" flex="10" layout-padding>
+                <div layout="column" layout-align="center end" flex="15" class="header-login-button-spacing">
+                    <md-button ng-click="navToLogin()" class="green-button-style capitalized">Login</md-button>
+                </div>
+            </div>
+            <div layout="row" flex="20"></div>
+            <div layout="row">
+                <div layout="column" flex="15"></div>
+                <div layout="column" layout-align="start start" flex>
+                    <h1 class="md-display-2">Login</h1>
+                </div>
+                <div layout="column" flex="15"></div>
+            </div>
+            <div layout="row">
+                <div layout="column" flex="15"></div>
+                <div layout="column" flex>
+                    <md-input-container>
+                        <label>Email</label>
+                        <input type="text"></input>
+                    </md-input-container>
+                </div>
+                <div layout="column" flex="15"></div>
+            </div>
+            <div layout="row">
+                <div layout="column" flex="15"></div>
+                <div layout="column" flex>
+                    <md-input-container>
+                        <label>Password</label>
+                        <input type="password"></input>
+                    </md-input-container>
+                </div>
+                <div layout="column" flex="15"></div>
+            </div>
+            <div layout="row" flex>
+                <div layout="column" flex="15"></div>
+                <div layout="column" flex="20">
+                    <md-button ng-click="navToLogin()" class="green-button-style capitalized">Sign In</md-button>
+                </div>
+                <div layout="column" flex="30">
+                    <md-button ng-click="navToLogin()" class="primary-green-color capitalized">Forgot your password?</md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</md-content>

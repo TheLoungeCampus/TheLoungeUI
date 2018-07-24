@@ -1,0 +1,106 @@
+<md-content flex class="whole-page">
+    <div layout="row" class="home-header-bg-green" layout-align="center center">
+        <div layout="column" flex="20">
+            <img class="header-logo-image" ng-src="assets/images/lounge-logo-green-background.png"/>
+        </div>
+        <div layout="column" flex class="home-nav-area">
+            <div layout="row" layout-align="end center" layout-padding>
+                <div layout="column" flex="5">
+                    <p class="md-caption" style="color: white">Home</p>
+                </div>
+                <div layout="column" flex="5" layout-align="center start">
+                    <img src="assets/images/blank-user.png" class="header-user-image"/>
+                </div>
+                <div layout="column" class="header-login-button-spacing" flex="15" layout-align="center center">
+                    <md-button ng-click="navToLogin()" class="home-header-create-btn white-button-style capitalized">+ Create Post</md-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div layout="row" layout-align="center start">
+        <div layout="column" flex="20" class="md-whiteframe-1dp" layout-padding layout-space-around>
+            <div layout="row" flex></div>
+            <div layout="row" layout-align="start center" flex>
+                <span flex="55" class="md-headline space-between-letters"><b>Filters</b></span>
+                <md-button layout-align="center center" flex="30" md-no-ink class="filter-apply-btn" flex ng-if="userIsApplyingFilters" layout="row">
+                    <span class="md-caption">Apply</span>
+                    <md-icon aria-label="Apply Filters" md-svg-icon="assets/icons/right-caret-black.svg"></md-icon>
+                </md-button>
+
+            </div>
+            <p class="md-subhead home-filter-title">Sort By</p>
+            <div layout="row" flex>
+                <md-radio-group ng-model="sortingSelection" layout="column">
+                    <md-radio-button class="green-radio-btn md-caption" value="Newest">Newest Posts</md-radio-button>
+                    <md-radio-button class="green-radio-btn md-caption" value="Most Popular">Most Popular</md-radio-button>
+                    <md-radio-button class="green-radio-btn md-caption" value="Lowest Price">Lowest Price</md-radio-button>
+                    <md-radio-button class="green-radio-btn md-caption" value="Highest Price">Highest Price</md-radio-button>
+                </md-radio-group>
+            </div>
+            <span class="md-subhead home-filter-title">Price</span>
+            <span
+                class="md-caption"
+                ng-if="slider.maxValue != slider.minValue">
+                ${{slider.minValue}} - ${{slider.maxValue}}
+            </span>
+            <span
+                class="md-caption"
+                ng-if="slider.maxValue == slider.minValue">${{slider.minValue}}
+            </span>
+            <div layout="row">
+                <rzslider
+                    rz-slider-model="slider.minValue"
+                    rz-slider-high="slider.maxValue"
+                    rz-slider-options="slider.options">
+                </rzslider>
+            </div>
+            <span class="md-subhead home-filter-title">Category</span>
+            <md-input-container>
+                <md-select aria-label="Category" ng-model="currentCategoryFilter.category">
+                    <md-option ng-repeat="(i,item) in categoriesList" value="{{item}}" ng-selected="i == 0 ? true:false">{{item.Name}}</md-option>
+                 </md-select>
+            </md-input-container>
+            <span class="md-subhead home-filter-title">Tags</span>
+            <md-content>
+                <div layout="row" layout-wrap>
+                    <md-button ng-repeat="tagName in testTags" class="home-tag-btn green-button-style">
+                        <span class="md-caption">{{tagName}}</span>
+                    </md-button>
+                </div>
+            </md-content>
+        </div>
+        <div layout="column" flex="5"></div>
+        <div layout="column" flex layout-padding layout-margin>
+            <div layout-align="center start">
+                <search-bar></search-bar>
+                <div layout="row">
+                    <md-nav-bar class="home-navbar md-primary" md-no-ink="true" aria-label="Navigation Pane" md-selected-nav-item="currentNavItem">
+                        <md-nav-item md-nav-click="updateList()" class="home-navbar-tab md-primary" name="Services" value="Services">
+                            <b>Services</b>
+                        </md-nav-item>
+                        <md-nav-item md-nav-click="updateList()" class="home-navbar-tab" name="Products" value="Products">
+                            <b>Products</b>
+                        </md-nav-item>
+                        <md-nav-item md-nav-click="updateList()" class="home-navbar-tab" name="Requests" value="Requests">
+                            <b>Requests</b>
+                        </md-nav-item>
+                    </md-nav-bar>
+                </div>
+                <div layout="column" flex>
+                    <div layout="row" ng-repeat="threeChunk in testSearchResults track by $index">
+                        <div layout="row" layout-wrap flex>
+                            <md-card ng-repeat="posting in threeChunk" class="home-page-search-result" flex="30">
+                                <img class="home-page-image" ng-src="{{posting.source}}"></img>
+                                <md-card-content layout="column">
+                                    <span class="md-subhead"><b>{{posting.title}}</b></span>
+                                    <span class="md-caption home-page-posting">By {{posting.postingUser}}</span>
+                                </md-card-content>
+                            </md-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout="column" flex="5"></div>
+    </div>
+</md-content>

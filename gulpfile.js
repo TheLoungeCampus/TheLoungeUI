@@ -7,7 +7,8 @@ var rename = require('gulp-rename');
 // Static server
 gulp.task('browser-sync', function() {
     browserSync.init({
-        proxy: "localhost:4000"
+        proxy: "localhost:4000",
+        notify: false
     });
 });
 

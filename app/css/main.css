@@ -1,6 +1,37 @@
+/* Overrides of Material CSS directives */
 body {
     font-family: "Roboto", sans-serif;
     font-size: 135%;
+    width: 100%;
+    height: 100%;
+}
+md-radio-button {
+    font-size: 75%;
+}
+md-option {
+    font-size: 55%;
+}
+md-slider {
+    margin: 0;
+    padding: 0px;
+}
+md-select-menu {
+    width: 90%;
+}
+md-select-value span {
+    font-size: 60%;
+}
+md-radio-button.md-checked.green-radio-btn .md-on {
+    background-color: #0fb584;
+}
+md-input-container > label {
+    color: lightgrey;
+}
+
+/* Specific to the app */
+
+.header-login-button-spacing {
+    padding-right: 15px
 }
 
 .capitalized {
@@ -8,9 +39,19 @@ body {
 }
 
 .green-button-style {
-    border: 2px solid #36c298;
+    border: 2px solid #0fb584;
     border-radius: 4px;
-    color: #36c298;
+    color: #0fb584;
+}
+
+.white-button-style {
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+}
+
+.primary-green-color {
+    color: #0fb584;
 }
 
 .grey-button-style {
@@ -21,4 +62,12 @@ body {
 
 .space-around {
     margin: 2px 2px 2px 2px;
+}
+
+.space-between-letters {
+    letter-spacing: 3px;
+}
+
+.space-below {
+    margin-bottom: 20px;
 }
